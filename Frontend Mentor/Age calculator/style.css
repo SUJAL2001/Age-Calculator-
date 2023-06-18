@@ -1,0 +1,128 @@
+body{
+ background-color: 
+#f0f0f0;
+}
+.frame{
+ height: 400px;
+ width:500px;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+ background-color: #fff;
+ border-bottom-right-radius: 30%;
+ border-top-left-radius:10px ;
+ border-top-right-radius:10px ;
+ border-bottom-left-radius: 10px;
+}
+label{
+ font-weight: 800;
+ text-align: center;
+}
+input{
+  margin-top: 5px;
+}
+.row1{
+ margin: 12px 8px 10px;
+ display: flex;
+ justify-content: space-between;
+}
+.box{
+ width: 100px;
+ height: 40px;
+ text-align: center;
+ font-weight: 900;
+ font-size: 20px;
+ border-radius: 8px;
+}
+.box:focus{
+ /* border-color:rgb(8, 124, 239) ; */
+ border: 2px solid rgb(8, 124, 239) ;
+ outline:2px solid rgb(8, 124, 239);
+}
+span{
+ font-weight: bolder;
+color: #864ef8;
+}
+img{
+ height: 70px;
+ width: 70px;
+ cursor: pointer;
+ border-radius: 50%;
+ object-fit: cover;
+ border: none;
+}
+button{
+ border-radius: 50%;
+ border: none;
+ position: absolute;
+ right: 30px;
+ top: 100px;
+ background-color: #fff;
+}
+.row2{
+ position: absolute;
+top:130px;
+left: 180px;
+line-height: 30px;
+}
+p{
+ font-size:40px;
+ font-weight: bolder;
+}
+.valid{
+ border: 2px solid rgb(5, 204, 5);
+}
+.shake{
+border: 2px solid red;
+ animation: shaking 0.5s linear 5s;
+}
+@keyframes shaking {
+ 0%{
+  transform: translateX(0px);
+ }
+ 25%{
+  transform: translateX(-5px);
+ }
+ 50%{
+  transform: translateX(5px);
+ }
+ 75%{
+  transform: translateX(-5px);
+ }
+ 100%{
+  transform: translateX(0px);
+ }
+}
+@media only screen and (max-width: 480px) {
+  .frame {
+    height: 500px;
+    width: 100%;
+    margin: auto;
+    border-radius: 0;
+    transform: none;
+    position: static;
+  }
+  .row1 {
+    flex-direction: column;
+  }
+  
+  .box {
+    width: 80%;
+    margin: 5px auto;
+  }
+  
+  button {
+    right: auto;
+    left: 50%;
+    transform: translate(-50%,-70%);
+    bottom: 30px;
+    top: auto;
+  }
+  
+  .row2 {
+    position: static;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
